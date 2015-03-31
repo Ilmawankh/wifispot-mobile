@@ -1,0 +1,98 @@
+<ion-view view-title="Lugar">
+  <ion-content>
+    <div>
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    			<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+	        </ui-gmap-marker>
+	    	</ui-gmap-google-map>
+    </div>
+    <div class="button-bar">
+      <a class="button button-positive">Info</a>
+      <a class="button button-balanced" ng-click="login()">Reviews</a>
+    </div>
+    <div class="item header">
+      <h2 class="title">{{tour.name}}</h2>
+      
+      <div class="row">
+        <div class="col icon ion-ios-people assertive"> <br><span>{{spot.wifispeed}} MB/s</span></div>
+        
+        <div class="col icon ion-ios-clock assertive"> <br><span>{{spot.schedule}}</span></div>
+        <div class="col icon ion-wifi assertive"> <br><span>{{spot.ssid}}</span></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img class="operator-avatar" src="img/logo.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span>Operado por: RNI</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+        </div>
+      </div>  
+    </div>
+    <div class="item item-divider icon fa-map-marker">
+      Dirección
+    </div>
+    <div class="item about">
+      <span>
+        {{spot.direccion}}
+      </span>
+    </div>
+
+    <!--
+    TODO: Find an approach to add highlights
+    <div class="list tour">
+      <div class="item item-divider">
+        Highlights
+      </div>
+      <span class="item">
+          Best price in the city
+      </span>
+      <span class="item">
+        Visit the Miraflores Locks 
+      </span>
+      <span class="item">
+        Lunch in Casco Viejo
+      </span>
+    </div> -->
+
+    <!-- <div class="list tour">
+      <div class="item item-divider icon fa-smile-o">
+        Beneficios
+      </div>
+      <span class="item icon fa-car">
+          Hotel Pick-up
+      </span>
+      <span class="item icon fa-ticket">
+        Ticket entrance 
+      </span>
+      <span class="item icon ion-android-globe">
+        Tour guide in english / spanish
+      </span>
+    </div> -->
+
+    <div class="list tour">
+      <div class="item item-divider icon fa-meh-o">
+        Categoria
+      </div>
+      <span class="item icon fa-close">
+         	{{spot.categoria}}
+      </span>
+    </div>
+     <div class="item item-divider">
+      Descripción
+    </div>
+    <div class="item">
+      <span>{{spot.descripcion}}</span>
+    </div>
+    
+    <button class="button button-full button-assertive">
+      Cómo llegar
+    </button>
+  </ion-content>
+</ion-view>

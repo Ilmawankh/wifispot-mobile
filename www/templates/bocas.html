@@ -1,0 +1,16 @@
+<ion-view view-title="Hotspots en Herrera">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.uniqueID}}">
+		    <a class="item item-thumbnail-left" href="#/app/playlists/{{playlist.uniqueID}}">
+		      <img src="img/logo.png">
+		      <h2>{{playlist.sitio}}</h2>
+		      <p>{{playlist.direccion}}</p>
+
+		    </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
